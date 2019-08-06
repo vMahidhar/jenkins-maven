@@ -16,5 +16,10 @@ pipeline {
                 sh "mvn package"
             }
         }
+	stage('Deploy') {
+            steps {
+                sh "cp web-app.war /opt/tomcat/latest/webapps"
+            }
+        }
     }
 }
