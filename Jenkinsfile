@@ -18,7 +18,7 @@ pipeline {
         }
 	stage('Deploy') {
             steps {
-                sh "cp target/web-app.war /opt/tomcat/latest/webapps"
+                sh "sudo cp target/web-app.war /opt/tomcat/latest/webapps"
             }
         }
     }
